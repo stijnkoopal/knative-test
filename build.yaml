@@ -1,0 +1,16 @@
+apiVersion: build.knative.dev/v1alpha1
+kind: Build
+metadata:
+  name: helloword-go-service-build
+spec:
+  serviceAccountName: default
+  source:
+    git:
+      url: https://github.com/stijnkoopal/knative-test.git
+      revision: master
+  steps:
+    - name: build-and-push
+      image: gcr.io/kaniko-project/executor:v0.8.0
+      args:  #See kaniko docs for more info about the arguments passed
+        - --dockerfile=Dockerfile
+        - --destination=eu.gcr.io/stijn-koopal-speeltuin/helloworld-go
