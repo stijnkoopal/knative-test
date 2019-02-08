@@ -6,7 +6,7 @@ spec:
   serviceAccountName: build-bot
   source:
     git:
-      url: https://github.com/my-user/my-repo
+      url: https://github.com/stijnkoopal/knative-test.git
       revision: master
   template:
     name: kaniko
