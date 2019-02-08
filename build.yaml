@@ -6,7 +6,7 @@ spec:
   serviceAccountName: default
   source:
     git:
-      url: https://github.com/stijnkoopal/knative-test.git
+      8
       revision: master
   steps:
     - name: build-and-push

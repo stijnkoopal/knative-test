@@ -9,7 +9,7 @@ export IP_ADDRESS=$(kubectl get svc ${INGRESS_GATEWAY} --namespace istio-system 
 export HOST_URL=$(kubectl get ksvc helloworld-go  --output jsonpath='{.status.domain}')
 
 #while true; do
-#    curl -H "Host: ${HOST_URL}" http://${IP_ADDRESS}
+    curl -H "Host: ${HOST_URL}" http://${IP_ADDRESS}
 #done
 #ab -t 6000 -c 10 -H "Host: ${HOST_URL}" "http://${IP_ADDRESS}/"
 
